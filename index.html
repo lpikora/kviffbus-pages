@@ -20,6 +20,10 @@
     <meta name="og:image:width" property="og:image:width" content="1024" />
     <meta name="og:image:height" property="og:image:height" content="1024" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="theme-color" content="#121212">
+
+
+
 
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -27,7 +31,7 @@
     <link rel="manifest" href="/manifest.json" />
     <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
 
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.1/dist/leaflet.css" />
+    <link  href="/leaflet.css" rel="preload" href="styles.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
 
     <!-- The `react-native-web` recommended style reset: https://necolas.github.io/react-native-web/docs/setup/#root-element -->
     <style id="expo-reset">
@@ -87,6 +91,10 @@
   <link rel="shortcut icon" href="/favicon.ico" /></head>
 
   <body>
+   <div class="font_preload" style="opacity: 0">
+      <span style="font-family: 'font-family: material-community;', Arial, sans-serif;"></span>
+      ...
+  </div>
     <!-- Use static rendering with Expo Router to support running without JavaScript. -->
     <noscript>
       You need to enable JavaScript to run this app.
