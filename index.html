@@ -4,8 +4,30 @@
     <meta charset="utf-8" />
     <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <title>KVIFF Bus</title>
+
+    <meta name="description" content="Aplikace umožňuje snadno vyhledávat spojení mezi zastávkami v rámci autobusové festivalové dopravy v Karlových Varech." />
+
+    <meta name="keywords" content="KVIFF Bus - jízdní řády,Vyhledávání,autobusových,spojů,na,MFF,KV,doprava" />
+    <meta name="og:locale" property="og:locale" content="en_US" />
+    <meta name="og:type" property="og:type" content="website" />
+    <meta name="og:site_name" property="og:site_name" content="KVIFF Bus - jízdní řády" />
+    <meta name="og:title" property="og:title" content="KVIFF Bus - jízdní řády" />
+    <meta name="og:description" property="og:description" content="Vyhledávání autobusových spojů na MFF KV" />
+    <meta name="og:image" property="og:image"
+        content="https://kviffbus.cz/kviffbusicon.png" />
+    <meta name="og:image:type" property="og:image:type" content="image/png" />
+    <meta name="og:image:width" property="og:image:width" content="1024" />
+    <meta name="og:image:height" property="og:image:height" content="1024" />
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/manifest.json" />
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.1/dist/leaflet.css" />
-    <title>kviffbus-web</title>
+
     <!-- The `react-native-web` recommended style reset: https://necolas.github.io/react-native-web/docs/setup/#root-element -->
     <style id="expo-reset">
       /* These styles make the body full-height */
@@ -31,7 +53,7 @@
     }
     @media (prefers-color-scheme: dark) {
       body {
-        background-color: #000;
+        background-color: #1f2936;
       }
     }
     </style>
@@ -48,6 +70,19 @@
         width: 100%;
       }
     </style>
+
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/sw.js').then(registration => {
+          console.log('Service Worker registered with scope:', registration.scope);
+        }).catch(error => {
+          console.error('Service Worker registration failed:', error);
+        });
+      });
+    }
+  </script>
+
   <link rel="shortcut icon" href="/favicon.ico" /></head>
 
   <body>
@@ -57,6 +92,6 @@
     </noscript>
     <!-- The root element for your Expo app. -->
     <div id="root"></div>
-  <script src="/expo/static/js/web/entry-0296c20b0b7fc1e04054db087292eeda.js" defer></script>
+  <script src="/_expo/static/js/web/entry-0631250cf93919ed42bfeededaf5e2c7.js" defer></script>
 </body>
 </html>
